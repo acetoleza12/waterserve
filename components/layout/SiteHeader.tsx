@@ -50,7 +50,7 @@ export function SiteHeader({
             <small>CALBAYOG CITY WATER DISTRICT</small>
           </span>
         </button>
-        <nav className={menu ? "open" : ""}>
+        <nav id="site-navigation" className={menu ? "open" : ""}>
           {nav.map(([p, label]) => (
             <button
               key={p}
@@ -60,6 +60,17 @@ export function SiteHeader({
               {label}
             </button>
           ))}
+          {/* The desktop staff shortcut is hidden on phone-sized screens. */}
+          {!user && (
+            <button
+              className="mobile-menu mobile-staff-link"
+              style={{ alignItems: "center", gap: 8, padding: "13px 0" }}
+              onClick={() => navigateTo("login")}
+            >
+              <Lock size={16} />
+              Staff portal
+            </button>
+          )}
         </nav>
         <div className="header-actions">
           {!user ? (
@@ -103,6 +114,8 @@ export function SiteHeader({
           <button
             className="mobile-menu"
             aria-label="Toggle navigation"
+            aria-expanded={menu}
+            aria-controls="site-navigation"
             onClick={() => setMenu(!menu)}
           >
             {menu ? <X /> : <Menu />}
@@ -112,3 +125,4 @@ export function SiteHeader({
     </header>
   );
 }
+
