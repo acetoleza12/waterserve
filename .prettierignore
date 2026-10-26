@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.wrangler/
+.vinext/
+.next/
+.runtime/
+drizzle/meta/
+package-lock.json

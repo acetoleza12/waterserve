@@ -1,0 +1,45 @@
+/* feedback styles */
+.error-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff1f0;
+  border: 1px solid #f4cbc7;
+  border-radius: 7px;
+  padding: 13px 17px;
+  color: #a34e45;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+.error-banner > button {
+  margin-left: auto;
+  padding: 0;
+  display: flex;
+}
+.error {
+  font-size: 11px;
+  color: #c0604c;
+  margin: 5px 0;
+}
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #163f53;
+  color: white;
+  border: 1px solid #3b6475;
+  padding: 15px 23px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px #072a4350;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  z-index: 60;
+  max-width: 90vw;
+}
+.toast svg {
+  color: #74d5bb;
+  flex-shrink: 0;
+}
